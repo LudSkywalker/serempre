@@ -1,17 +1,24 @@
+if (process.env.NODE_ENV!="production"){
+    require("dotenv").config();
+}
 const express = require("express");
-const cors = require("cors");
-const morgan = require("morgan");
+const middlewares = require("./middlewares");
 
-const app=express();
+//Instans of server
+const app = express();
 
-//MIDDLEWARES
-app.use(morgan("dev"))
-app.use(express.urlencoded({extended: false}))
-app.use(express.json())
-//config cors to enable fetch 
-app.use(cors());
+//Settings of server
+app.set("port", process.env.PORT || 3000);
+app.set("json spaces", 2);
 
+//Implement of middlewares
+app.use(middlewares);
 
+//Implement if routes
+app.use("/api/products", require("./routes/products"));
+app.use("/api/categories", require("./routes/categories"));
+app.use("/api/suppliers", require("./routes/suppliers"));
 
-app.listen(3000);
-
+app.listen(app.get("port"), () => {
+	console.log("Sever on port", app.get("port"));
+});
