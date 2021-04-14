@@ -1,6 +1,6 @@
 const {Router}=require("express")
 const categories= Router();
-const pool = require("../dbConection");
+const pool = require("../database/dbConection");
 
 categories.get("/",(req,res)=>{
     res.send("hola")

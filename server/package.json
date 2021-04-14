@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon index.js",
+    "loadData": "cross-env NODE_ENV=dev node ./database/loadDataDBEficient.js",
     "start": "cross-env NODE_ENV=production nodemon index.js"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
+    "csvtojson": "^2.0.10",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",

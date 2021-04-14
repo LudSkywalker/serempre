@@ -1,0 +1,5 @@
+not Order_Details es OrderDetails
+hexagedimal al principio de cada csv
+Products no va con True False, va con 0 y 1
+cambie orden en tabla employee para empezar con el 2 y asi tener referenciado el jefe desde el principio
+cambie el valor ,, de ReportTo en tabla employee por ,null,

@@ -1,24 +1,30 @@
-if (process.env.NODE_ENV!="production"){
-    require("dotenv").config();
+if (process.env.NODE_ENV != "production") {
+	require("dotenv").config();
 }
 const express = require("express");
-const middlewares = require("./middlewares");
+const cors = require("cors");
+const morgan = require("morgan");
 
 //Instans of server
 const app = express();
 
 //Settings of server
-app.set("port", process.env.PORT || 3000);
 app.set("json spaces", 2);
+app.set("port", process.env.PORT || 3000);
 
 //Implement of middlewares
-app.use(middlewares);
+app.use(cors());
+app.use(morgan("dev"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 
 //Implement if routes
-app.use("/api/products", require("./routes/products"));
-app.use("/api/categories", require("./routes/categories"));
-app.use("/api/suppliers", require("./routes/suppliers"));
+app.use("/api", require("./routes/products"));
+// app.use("/api/categories", require("./routes/categories"));
+// app.use("/api/suppliers", require("./routes/suppliers"));
 
-app.listen(app.get("port"), () => {
+(async () => {
+	await app.listen(app.get("port"));
 	console.log("Sever on port", app.get("port"));
-});
+})();

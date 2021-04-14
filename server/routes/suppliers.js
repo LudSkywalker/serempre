@@ -1,5 +1,5 @@
 const {Router}=require("express")
-const pool = require("../dbConection");
+const pool = require("../database/dbConection");
 const suppliers= Router();
 
 suppliers.get("/",(req,res)=>{

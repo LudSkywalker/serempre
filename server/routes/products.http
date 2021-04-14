@@ -1,0 +1,5 @@
+GET http://localhost:4000/api/products?pag=1&width=2&asc=true
+
+###
+
+GET http://localhost:4000/api/products?pag=0&width=2
