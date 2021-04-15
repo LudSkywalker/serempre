@@ -80,7 +80,7 @@ function isHex(num) {
 			query += ";\n";
 		}
 	}
-	fs.writeFileSync("quer.sql",query)
+	//fs.writeFileSync("quer.sql",query)
 	await pool.query(query);
 	await pool.end();
 })();
