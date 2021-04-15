@@ -9,14 +9,23 @@ For run all scripts without problem in environments of prodution and develop, yo
 For bowth ways the values are this ("If you are in the first way, just copy and paste the next text into the file '.env' " ):
 
 #Port of the server, if server fail connected to this, just test with other number like 3000,4343, etc
+
 PORT=4000
+
 #Put in this the host of your database example: localhost
+
 MYSQL_HOST= localhost
+
 #keep this DB to can run script of create and reset database
+
 MYSQL_DB=bykfnabpbn8vqi39xlct
+
 #Put your username of the database manager MYSQL or MariaDB, by default :root
+
 MYSQL_USER=root
+
 #Put your password of the database manager MYSQL or MariaDB, by default is null
+
 MYSQL_PASSWORD=
 
 ## DATABASE
