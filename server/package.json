@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon index.js",
     "loadData": "cross-env NODE_ENV=dev node ./database/loadDataDBEficient.js",
-    "start": "cross-env NODE_ENV=production nodemon index.js"
+    "start": "cross-env NODE_ENV=production node index.js"
   },
   "keywords": [],
   "author": "Luding Castañeda('Lud Skywalker')",
