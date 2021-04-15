@@ -34,5 +34,7 @@ Create an db with de name "bykfnabpbn8vqi39xlct" into MYSQL
 First move into server and open your terminal there,after type "npm i" to download all modules
 
 npm run start: It's the prodution script, run the server
+
 npm run dev: It's the prodution develep script, run the server with hot reload
+
 npm run loadData: This script create or restart from default your database 
