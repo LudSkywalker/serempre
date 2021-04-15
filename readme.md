@@ -20,16 +20,16 @@ MYSQL_HOST= localhost
 
 MYSQL_DB=bykfnabpbn8vqi39xlct
 
-#Put your username of the database manager MYSQL or MariaDB, by default :root
+#Put your username of the database manager MYSQL , by default :root
 
 MYSQL_USER=root
 
-#Put your password of the database manager MYSQL or MariaDB, by default is null
+#Put your password of the database manager MYSQL, by default is null
 
 MYSQL_PASSWORD=
 
 ## DATABASE
-Create an db with de name "bykfnabpbn8vqi39xlct" into MYSQL or MariaDB
+Create an db with de name "bykfnabpbn8vqi39xlct" into MYSQL 
 ## Scripts
 First move into server and open your terminal there,after type "npm i" to download all modules
 
