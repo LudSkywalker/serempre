@@ -1,5 +1,5 @@
 # Serempre test api rest
-## Environment Variables
+## TEST THE API
 If you want to test, the real domain of this proyect is https://serempreapp.herokuapp.com/, try for example https://serempreapp.herokuapp.com/api/products?pag=2&width=3&asc=true
 ## Environment Variables
 You have 2 ways for run the app
