@@ -30,7 +30,7 @@ MYSQL_USER=root
 
 MYSQL_PASSWORD=
 
-## DATABASE
+## Database
 Create an db with de name "bykfnabpbn8vqi39xlct" into MYSQL 
 ## Scripts
 First move into server and open your terminal there,after type "npm i" to download all modules
