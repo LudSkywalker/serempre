@@ -14,15 +14,16 @@ app.set("port", process.env.PORT || 3000);
 
 //Implement of middlewares
 app.use(cors());
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 app.use(morgan("dev"));
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+
 
 
 //Implement if routes
 app.use("/api", require("./routes/products"));
-// app.use("/api/categories", require("./routes/categories"));
-// app.use("/api/suppliers", require("./routes/suppliers"));
+app.use("/api/categories", require("./routes/categories"));
+app.use("/api/suppliers", require("./routes/suppliers"));
 
 (async () => {
 	await app.listen(app.get("port"));

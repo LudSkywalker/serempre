@@ -1,9 +1,7 @@
 const {Router}=require("express")
 const categories= Router();
-const pool = require("../database/dbConection");
+const getCategoryProducts= require("../models/categories/getCategoryProducts");
 
-categories.get("/",(req,res)=>{
-    res.send("hola")
-})
+categories.get("/:id/products",getCategoryProducts)
 
 module.exports=categories;

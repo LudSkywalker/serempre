@@ -1,5 +1,52 @@
-GET http://localhost:4000/api/products?pag=1&width=2&asc=true
+
+GET http://localhost:4000/api/products?pag=2&width=3&asc=true
 
 ###
 
-GET http://localhost:4000/api/products?pag=0&width=2
+GET http://localhost:4000/api/products/search?productName=hai&categoryName=&supplierName=
+
+###
+
+GET http://localhost:4000/api/products/77
+
+###
+
+POST  http://localhost:4000/api/products
+content-type: application/json
+
+{
+    "CategoryID": 3,
+    "Discontinued": true,
+    "ProductName": "Chef Anton's Cajun Seasoning",
+    "QuantityPerUnit": "48 - 6 oz jars",
+    "ReorderLevel": 0,
+    "SupplierID": 2,
+    "UnitPrice": 22,
+    "UnitsInStock": 53,
+    "UnitsOnOrder": 0
+}
+
+###
+
+PUT  http://localhost:4000/api/products/1
+content-type: application/json
+
+{
+    "ProductName": "Chefff "
+}
+
+###
+
+GET http://localhost:4000/api/categories/1/products?pag=2&width=3
+
+###
+
+GET http://localhost:4000/api/suppliers/1
+
+###
+
+GET http://localhost:4000/api/suppliers/1/products
+
+###
+
+DELETE  http://localhost:4000/api/suppliers/12

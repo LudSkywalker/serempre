@@ -1,9 +1,11 @@
-const {Router}=require("express")
-const pool = require("../database/dbConection");
-const suppliers= Router();
+const { Router } = require("express");
+const deleteSuppliersByID = require("../models/suppliers/deleteSuppliersByID");
+const suppliers = Router();
+const getSuppliersByID = require("../models/suppliers/getSuppliersByID");
+const getSuppliersProductsByID = require("../models/suppliers/getSuppliersProductsByID");
 
-suppliers.get("/",(req,res)=>{
-    res.send("hola")
-})
+suppliers.get("/:id/products",getSuppliersProductsByID);
+suppliers.get("/:id",getSuppliersByID);
+suppliers.delete("/:id",deleteSuppliersByID);
 
-module.exports=suppliers;
+module.exports = suppliers;
