@@ -50,3 +50,4 @@ GET http://localhost:4000/api/suppliers/1/products
 ###
 
 DELETE  http://localhost:4000/api/suppliers/12
+

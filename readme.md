@@ -1,5 +1,7 @@
 # Serempre test api rest
 ## Environment Variables
+If you want to test, the real domain of this proyect is https://serempreapp.herokuapp.com/, try for example https://serempreapp.herokuapp.com/api/products?pag=2&width=3&asc=true
+## Environment Variables
 You have 2 ways for run the app
 - First
 If you are just in develop, and didn't need run the production script(npm start) you can create a file named ".env" into the server folder
