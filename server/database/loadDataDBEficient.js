@@ -14,6 +14,7 @@ function isHex(num) {
 
 (async () => {
 	let tables = fs.readdirSync(dataFolderPath);
+	query +="CREATE SCHEMA IF NOT EXISTS `bykfnabpbn8vqi39xlct`; USE `bykfnabpbn8vqi39xlct`;"
 	for (let i = tables.length - 1; i >= 0; i--) {
 		table = tables[i].split(".")[1];
 		query += "DROP TABLE IF EXISTS " + table + ";";
